@@ -37,6 +37,7 @@ $cookieMessage = getCookieMessage();
                 <th>Customer Name</th>
                 <th>Address</th>
                 <th>Email</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
@@ -45,12 +46,14 @@ $cookieMessage = getCookieMessage();
                 <td data-column="Last Name">Ahmed Ali</td>
                 <td data-column="Job Title">Rawalpindi Pakistan</td>
                 <td data-column="Twitter">@ahmed.gmail.com</td>
+                <td data-column="Twitter"><button style="padding:5px 10px;color:#fff">checkout</button></td>
             </tr>
             <tr>
                 <td data-column="First Name"> <img width="230px;height:180px" src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80" alt="Product Name" class="product-image"></td>
                 <td data-column="Last Name">Mehmood Khan</td>
                 <td data-column="Job Title">Karachi Pakistan</td>
                 <td data-column="Twitter">@mehmood.gmail.com</td>
+                <td data-column="Twitter"><button style="padding:5px 10px;color:#fff">checkout</button></td>
             </tr>
         </tbody>
     </table>
