@@ -278,6 +278,7 @@ form .form-content .forgetPassword {
     background-color: #645CBB !important;
     color: #000;
     z-index: 100;
+    top: 0;
 }
 
 .navbar-container {
@@ -550,210 +551,227 @@ and also iPads specifically.
         color: #000;
         font-weight: bold;
     }
-
 }
 
-img {
-    max-width: 100%;
-    display: block;
+
+.products-image {
+    float: left;
+    width: 20%;
 }
 
-.cart-btn {
-    display: flex;
-    justify-content: flex-end;
-}
-
-#cart {
-    position: relative;
-    font-size: 2rem;
-    cursor: pointer;
-    margin: 1em 4em 0 0;
-}
-
-.cart-quantity {
-    color: white;
-    background-color: red;
-    padding: .2em .3em;
-    position: absolute;
-    margin: .8em 7.5em 0 0;
-    right: 0;
-    border: solid 2px red;
-    border-radius: 15px;
-    font-weight: bolder;
-}
-
-.items-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    margin-top: 1em
-}
-
-.card {
-    /*   width: 15rem; */
-    margin: 1em;
-    position: relative;
-    overflow: hidden;
-    text-align: center
-}
-
-.card:hover .add-to-cart {
-    transform: translateX(0);
-}
-
-.product-image {
-    margin-bottom: 1em
-}
-
-.add-to-cart {
-    background-color: black;
-    color: white;
-    position: absolute;
-    right: 0;
-    top: 65%;
-    padding: .5em 1em;
-    transform: translateX(300px);
-    transition: .5s ease;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    font-weight: bolder;
-    font-size: 1.2rem
+.product-details {
+    float: left;
+    width: 37%;
 }
 
 .product-price {
-    padding-top: 1em;
-    font-weight: bold;
-    font-size: 1.5rem;
-}
-
-.cart-modal-overlay {
-    position: fixed;
-    width: 100vw;
-    height: 100%;
-    background-color: rgba(0, 0, 0, .5);
-    z-index: 2;
-    transform: translateX(-200%);
-    transition: .5s ease-out;
-
-}
-
-.cart-modal {
-    height: 100vh;
-    width: 50%;
-    background-color: rgb(50, 50, 50);
-    float: right;
-    overflow: scroll;
-    overflow-x: hidden;
-}
-
-#close-btn {
-    font-size: 1.5rem;
-    float: right;
-    margin: .5em 2em 0 0;
-    color: white;
-    cursor: pointer;
-}
-
-.cart-is-empty {
-    color: white;
-    text-align: center;
-    font-size: 1.5rem;
-    margin-bottom: 1em;
-    display: none;
-
-}
-
-.total {
-    text-align: center;
-    margin: 2em 0 2em 0;
-    /*   display: none; */
-}
-
-.cart-total {
-    color: white;
-}
-
-.total-price {
-    color: white;
-    font-size: 2rem;
-    display: block;
-}
-
-.purchase-btn {
-    font-size: 1rem;
-    font-weight: bolder;
-    background-color: green;
-    color: white;
-    padding: 1em 2em;
-    border-radius: 10px;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    margin: 2em 0 1em 0;
-}
-
-.product-rows {
-    margin-top: 3em;
-    width: 95%;
-    margin-left: auto;
-    margin-right: auto;
-
-}
-
-.product-row {
-    display: flex;
-    align-items: center;
-}
-
-.cart-image {
-    width: 10rem;
-    margin: 1em;
-}
-
-.cart-price {
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bolder;
+    float: left;
+    width: 12%;
 }
 
 .product-quantity {
-    width: 4rem;
-    font-size: 2rem;
-    margin-left: 3rem;
+    float: left;
+    width: 10%;
 }
 
-.remove-btn {
-    padding: 1em 2em;
-    background-color: red;
-    color: white;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    margin-left: 3rem;
-    font-weight: bolder;
-    font-size: 1rem;
+.product-removal {
+    float: left;
+    width: 9%;
 }
 
-.remove-btn:active {
-    transform: translateY(5px);
+.product-line-price {
+    float: left;
+    width: 12%;
+    text-align: right;
 }
 
-@media (max-width: 1000px) {
-    .cart-modal {
-        width: 100vw;
+/* This is used as the traditional .clearfix class */
+.group:before, .shopping-cart:before,
+.column-labels:before,
+.product:before,
+.totals-item:before,
+.group:after,
+.shopping-cart:after,
+.column-labels:after,
+.product:after,
+.totals-item:after {
+    content: "";
+    display: table;
+}
+
+.group:after, .shopping-cart:after,
+.column-labels:after,
+.product:after,
+.totals-item:after {
+    clear: both;
+}
+
+.group, .shopping-cart,
+.column-labels,
+.product,
+.totals-item {
+    zoom: 1;
+}
+
+/* Apply clearfix in a few places */
+/* Apply dollar signs */
+.product .product-price:before,
+.product .product-line-price:before,
+.totals-value:before {
+    content: "$";
+}
+
+
+h1 {
+    font-weight: 100;
+}
+
+label {
+    color: #aaa;
+}
+
+.shopping-cart {
+    margin-top: -45px;
+}
+
+/* Column headers */
+.column-labels label {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.column-labels .product-image,
+.column-labels .product-details,
+.column-labels .product-removal {
+    text-indent: -9999px;
+}
+
+/* Product entries */
+.product {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.product .products-image {
+    text-align: center;
+}
+
+.product .products-image img {
+    width: 200px;
+    height: 200px
+}
+
+.product .product-details .product-title {
+    margin-right: 20px;
+    font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium";
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.product .product-details .product-description {
+    margin: 5px 20px 5px 0;
+    line-height: 1.4em;
+}
+
+.product .product-quantity input {
+    width: 40px;
+}
+
+
+
+.checkout {
+    border: 0;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #645CBB;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 3px;
+    width: 150px;
+    display: grid;
+    margin: 0 auto;
+}
+
+
+
+/* Make adjustments for tablet */
+@media screen and (max-width: 650px) {
+    .shopping-cart {
+        margin: 0;
+        padding-top: 20px;
+        border-top: 1px solid #eee;
     }
 
-    .product-row {
-        flex-direction: column;
-        text-align: center;
-        margin-bottom: 2em;
+    .column-labels {
+        display: none;
     }
 
-    .remove-btn {
-        margin: 0
+    .products-image {
+        float: right;
+        width: auto;
+    }
+
+    .product-image img {
+        margin: 0 0 10px 10px;
+    }
+
+    .product-details {
+        float: none;
+        margin-bottom: 10px;
+        width: auto;
+    }
+
+    .product-price {
+        clear: both;
+        width: 70px;
     }
 
     .product-quantity {
-        margin: .5em 0 .5em 0
+        width: 100px;
+    }
+
+    .product-quantity input {
+        margin-left: 20px;
+    }
+
+    .product-quantity:before {
+        content: "x";
+    }
+
+    .product-removal {
+        width: auto;
+    }
+
+    .product-line-price {
+        float: right;
+        width: 70px;
+    }
+}
+
+/* Make more adjustments for phone */
+@media screen and (max-width: 350px) {
+    .product-removal {
+        float: right;
+    }
+
+    .product-line-price {
+        float: right;
+        clear: left;
+        width: auto;
+        margin-top: 10px;
+    }
+
+    .product .product-line-price:before {
+        content: "Item Total: $";
+    }
+
+    .totals .totals-item label {
+        width: 60%;
+    }
+
+    .totals .totals-item .totals-value {
+        width: 40%;
     }
 }

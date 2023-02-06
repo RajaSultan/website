@@ -19,10 +19,10 @@ $cookieMessage = getCookieMessage();
             <div class="navbar-container ">
                 <ul class="menu-items">
                     <li><a href="./Homepage.php">Homepage</a></li>
-                    <li><a href="#">ProductList</a></li>
-                    <li><a href="#">ViewCart</a></li>
+                    <li><a href="./ProductList.php">ProductList</a></li>
+                    <li><a href="./ViewCart.php">ViewCart</a></li>
                     <li><a href="./CustomerList.php">CustomerList</a></li>
-                    <li><a href="#">OrderList</a></li>
+                    <li><a href="./OrderList.php">OrderList</a></li>
                     <li><a href="./signUp.php">SignUp</a></li>
                 </ul>
                 <h1 class="main-title">My Store</h1>
@@ -36,7 +36,7 @@ $cookieMessage = getCookieMessage();
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Job Title</th>
-                <th>Twitter</th>
+                <th>Social Media</th>
             </tr>
         </thead>
         <tbody>
